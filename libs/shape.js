@@ -1,9 +1,28 @@
 class Shape {
-    constructor(shapeColor, textColor, text) {
+    constructor() {
+        this.shapeColor = '';
+    }
+
+    setColor(shapeColor) {
         this.shapeColor = shapeColor;
-        this.textColor = textColor;
-        this.text = text;
     }
 };
 
-module.exports = Shape;
+class Square extends Shape {
+    render() {
+        return `<rect x="90" y="40" width="120" height="120" fill="${this.shapeColor}" />`
+    }
+}
+
+class Triangle extends Shape {
+    render() {
+        return `<circle cx="150" cy="100" r="80" fill="${this.shapeColor}" />`
+    }
+}
+
+class Circle extends Shape {
+    render() {
+        return `<circle cx="150" cy="100" r="80" fill="${this.shapeColor}" />`
+    }
+}
+module.exports = {Square, Triangle, Circle};
