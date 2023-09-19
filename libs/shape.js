@@ -1,10 +1,10 @@
 class Shape {
     constructor() {
-        this.shapeColor = '';
+        this.color = '';
     }
 
-    setColor(shapeColor) {
-        this.shapeColor = shapeColor;
+    setColor(color) {
+        this.color= color;
     }
 };
 
